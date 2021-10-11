@@ -20,6 +20,7 @@ javac Main.java
 java Main
 ```
 When the program runs, the user is asked to give as an input the number of family members that must cross the bridge, the total time limit that must not be exceeded as well as the amount of time that is required for each member to cross from one side to the other. For this example let's go with 5 people, and 1,3,6,8,12 times for each member respectively. Total time limit will be 30 seconds, so the algorithm must find a solution in 30 seconds or under.
+
 ![Εναλλακτικό κείμενο](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/execution-example-images/exec1.png)
 
 
