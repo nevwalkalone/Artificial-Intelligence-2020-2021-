@@ -4,8 +4,12 @@ This Assignment is about the Bridge Crossing Problem. It was asked to implement 
 ## Execution
 After you've downloaded locally this repository, you can either execute Main.java in cmd/terminal or in an IDE of your choice like Intellij or Eclipse. In both scenarios all java files located in the src folder must be in the same directory. Below an example of how to run the program in cmd/terminal is shown.
 
+
+### Change directory
 ```properties
 cd "Directory where the src folder is located"
 ```  
+
+
 
 ## Grade = 100/100
