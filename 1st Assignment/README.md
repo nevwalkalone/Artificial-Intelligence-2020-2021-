@@ -3,8 +3,7 @@ This Assignment is about the Bridge Crossing Problem. It was asked to implement 
 
 ## Execution
 ```console
-foo@bar:~$ whoami
-foo
+java something
 ```
 
 ## Grade = 100/100
