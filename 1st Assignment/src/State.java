@@ -11,7 +11,7 @@ public class State implements Comparable<State> {
 	// family members on the left side
 	private ArrayList<Person> leftSide ;		
 
-    // the side that the light is at the moment(state)
+        // the side that the light is at the moment(state)
 	private String light_side;						
 
 	// score attribute needed to evaluate each state , default score used for initial state
