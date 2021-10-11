@@ -1,33 +1,29 @@
+import java.util.*; 
 
+// Class State representing a state of the bridge crossing problem
+// Comparable is implemented in order to be able to compare the scores of 2 states
 
-import java.util.*; // import needed modules from java.util
-
-
-// Class State representing a state of the bridge cross problem
-
-
+public class State implements Comparable<State> {		
 	
-public class State implements Comparable<State> {		// implementing in order to be able to compare 2 states as we want
-	
-	// State attributes
-	
+	// family members on the right side
 	private ArrayList<Person> rightSide ;			
-													// 2 ArrayLists represent the family members( of class Person) to be
-	private ArrayList<Person> leftSide ;			// on each side
+	
+	// family members on the left side
+	private ArrayList<Person> leftSide ;		
 
-	private String light_side;						// the side that the light is at the moment(state)
+    // the side that the light is at the moment(state)
+	private String light_side;						
 
-	private int score = 1000;					// score attribute needed to evaluate each state , default score used for initial state
+	// score attribute needed to evaluate each state , default score used for initial state
+	private int score = 1000;
 
-	private State father = null;			// father state (previous state that resulted to present state) needed mainly
-											// for print reasons
+	// father state (previous state that resulted to present state) needed mainly
+	// for print reasons
+	private State father = null;			
 											
-											
-	private int cost=0;						// cost attribute used to represent the time cost needed to
-											// achieve the current state
-	
-	
-	
+	// cost attribute used to represent the time cost needed to
+	// achieve the current state									
+	private int cost=0;						
 	
 	// Constructors
 
@@ -35,27 +31,20 @@ public class State implements Comparable<State> {		// implementing in order to b
 		this.setRightSide(init);
 		this.leftSide = new ArrayList<Person>();
 		this.setLightSide("right");
-		
 	}
 
 	public State(ArrayList<Person> left, ArrayList<Person> right, String lamp,int cost){
-		
-		
 		this.setRightSide(right);
 		this.setLeftSide(left);
 		this.setLightSide(lamp);
 		this.setCost(cost);
-		
-		
 	}
 
 	public State(){
 
 	}
 	
-	
-	
-	// Getters
+	// GETTERS
 
 	public ArrayList<Person> getRightSide (){
 		return rightSide;
@@ -84,9 +73,7 @@ public class State implements Comparable<State> {		// implementing in order to b
 		return this.cost;
 	}
 
-	
-	
-	// Setters 
+	// SETTERS
 
 	public void setRightSide(ArrayList<Person> rightSide){
 		this.rightSide =  new ArrayList<Person>(rightSide);
@@ -114,106 +101,89 @@ public class State implements Comparable<State> {		// implementing in order to b
 	private void setScore(int score) {
 		this.score=score;
 	}
-	
 
 
-	// Necessary function in order to check whether a state 
-	// is terminal or not
-	
-	
+	/**
+	 * Necessary function to check whether
+	 * a state is terminal or not
+	 * @return true if state is terminal, false otherwise
+	 */
+
 	public boolean isTerminal(){
-		
-		return rightSide.isEmpty();		// if right side gets empty(we assume starting from the right side)
-										// then everyone passed the bridge and so game finished.
-		
+		return rightSide.isEmpty();		
 	}
 	
 	
 
-	//Heurestic function used to make an approach of the cost of a specific state
-	
+	/**
+	 * Heuretic function used to calculate the
+	 * cost of a specific state to reach terminal state
+	 * by removing the restriction of 2 max people on the bridge
+	 * @return the cost of this state
+	 */
+
 	private int heuristic(){
+		int h_score = 0;
+		int max = 0;
 
-			int h_score = 0;
-			int max = 0;
+		// if the light is on the right side we assume 
+		// that all right side people can cross the bridge at the same time
+		// cost is equal to the maximum time 
+		if (light_side == "right"){	
 
-			if (light_side == "right"){					// if the light is on the right side we assume 
-														// that all right side people can cross the bridge at the same time.
-
-						for (int i = 0; i < rightSide.size(); i++){
-
-							if (rightSide.get(i).getTime() > max)
-								
-								max = rightSide.get(i).getTime();
-
-					}
-
-				return max  ;
-
-			}
-
-
-		    else {												// if the light is on the left side we assume that the fastest left person
-																// moves on the right side and then all right side people cross the bridge at the same time
-			
-					int min = 10000;
-
-					for (int i = 0; i < leftSide.size(); i++){
-
-						if (leftSide.get(i).getTime() < min) {
-
-							min = leftSide.get(i).getTime(); 
-							
-						}
-
-					}
-					
-					if(this.getRightSide().isEmpty()){
-						
-						h_score = min;
-						return h_score;
-						
-					}
-		
-		
-					for (int i = 0; i < rightSide.size(); i++){
-
-						if (rightSide.get(i).getTime() > max) {
-
-							max = rightSide.get(i).getTime();
-							
-						}
-					}
-					
-				if (max < min) {
-							
-						max = min;
-						
+			for (int i = 0; i < rightSide.size(); i++){
+				if (rightSide.get(i).getTime() > max)
+					max = rightSide.get(i).getTime();
 				}
-						
-				return max + min;
-				
+			return max ;
 		}
 
-
-}
+		// if the light is on the left side we assume that the fastest left person
+		// moves on the right side and then all right side people cross the bridge at the same time
+		// cost is equal to the minimum time of the left side plus the max time of the right side
+		else {												
+			int min = 10000;
+			for (int i = 0; i < leftSide.size(); i++){
+				if (leftSide.get(i).getTime() < min) {
+					min = leftSide.get(i).getTime(); 	
+				}
+			}		
+			if(this.getRightSide().isEmpty()){
+				h_score = min;
+				return h_score;		
+			}	
+			for (int i = 0; i < rightSide.size(); i++){
+				if (rightSide.get(i).getTime() > max) {
+					max = rightSide.get(i).getTime();
+				}
+			}		
+			if (max < min) {
+				max = min;
+			}
+			return max + min;	
+		}
+	}
 	
 
-	// A* evaluation , taking into account the time cost to this state  
-	// as well as the heuristic approach.
 	
-	
+	/**
+	 * A* evaluation, taking into account the time cost
+	 * to reach the specific state, as well as the 
+	 * heuristic approach
+	 */
+
 	private void evaluate(){
-
-	
 		setScore(this.getCost()+this.heuristic());
-		
-		}	
+	}	
 
 
 	
-	// getChildren function is used to produce all possible 
-	// next states of a specific function 
+	/**
+	 * This funcion is used to produce
+	 * all possible children-states of a
+	 * specific state
+	 * @return the arraylist that contains all children
+	 */
 	
 	public ArrayList<State> getChildren(){
 		
@@ -223,166 +193,132 @@ public class State implements Comparable<State> {		// implementing in order to b
 		int maxim=0;
 		int time1=0;
 		int time2=0;
-		
 
 
-		if (light_side == "right"){												
-																				
+		if (light_side == "right"){	
+
+			//this is a special case of only 1 family member playing the game
 			if (this.leftSide.isEmpty() && (this.rightSide.size()==1)) {
-				
-				
 				child=new State(this.leftSide,this.rightSide,"right",this.cost);
-				
 				child.setFather(this);
-				
 				child.setCost(this.rightSide.get(0).time);
-				
 				temp.add(this.rightSide.get(0));
-				
 				child.moveLeft(temp);
 				
 				if (child.getCost()<=Main.max_time){
-
-							children.add(child);
-							
-							}
+							children.add(child);		
+				}
 			}
-		
-																	// if light is on the right side of the current state 
-																	// we only check next states coming out of moves form 2 person
-																	// to left , since moving only 1 wound had not any interest on our goal
-			
-				else {														 
-				
-					for (int i = 0; i < rightSide.size(); i++){
+			// 2 people or more	
+			//if the light is on the right side we produce
+			//states coming out of moves from 2 persons to the left
+			//states coming out of of moves	from 1 person only
+			//won't lead to an optimal solution 												
+			else {														 
 
-						for (int j = i + 1; j < rightSide.size() ; j++){
+				for (int i = 0; i < rightSide.size(); i++){
+					for (int j = i + 1; j < rightSide.size() ; j++){
+						temp.clear();
+						child=new State(this.leftSide,this.rightSide,"right",this.cost);
+						child.setFather(this);
+						temp.add(this.rightSide.get(i));
+						temp.add(this.rightSide.get(j));
+						time1=this.rightSide.get(i).getTime();
+						time2=this.rightSide.get(j).getTime();
+						maxim=Math.max(time1, time2);
+						child.moveLeft(temp);
+						child.setCost(maxim);
+						child.evaluate();
 
-							temp.clear();
-					
-					
-						
-							child=new State(this.leftSide,this.rightSide,"right",this.cost);
-							child.setFather(this);
-							temp.add(this.rightSide.get(i));
-
-							temp.add(this.rightSide.get(j));
-	
-							time1=this.rightSide.get(i).getTime();
-							time2=this.rightSide.get(j).getTime();
-						
-						
-							maxim=Math.max(time1, time2);
-						
-
-							child.moveLeft(temp);
-						
-							child.setCost(maxim);
-
-							child.evaluate();
-							
-							if (child.getCost()<=Main.max_time){
-
+						//we add this child to the children array
+						//only if its cost doesn't surpass the time
+						//restriction
+						if (child.getCost()<=Main.max_time){
 							children.add(child);
-							
-							}
-
+						}
 					}
 				}
 			}
 		}
-		
-		
-		
-		else if (light_side == "left"){								// if light is on the left side of the current state 
-																	// we only check next states coming out of moves form only 1 person
-																	// right, since moving 2 would had no interest
-			
-				for (int i = 0; i < this.leftSide.size(); i++){
 
-						child = new State(this.leftSide, this.rightSide, this.light_side,this.cost);
-						
-						
-						Person person=this.leftSide.get(i);
-						
-						time1=person.getTime();
-						
-						child.moveRight(person);
-						
-						child.setCost(time1);
-						
-						child.evaluate();
+		//if the light is on the left side we produce
+		//states coming out of moves from only 1 person
+		//each time back to the right
+		else if (light_side == "left"){								
 
-						child.setFather(this);
-
-						if (child.getCost()<=Main.max_time){
-
-							children.add(child);
-							
-							}
-
+			for (int i = 0; i < this.leftSide.size(); i++){
+				child = new State(this.leftSide, this.rightSide, this.light_side,this.cost);
+				Person person=this.leftSide.get(i);
+				time1=person.getTime();
+				child.moveRight(person);
+				child.setCost(time1);
+				child.evaluate();
+				child.setFather(this);
+				
+				//we add this child to the children array
+				//only if its cost doesn't surpass the time
+				//restriction
+				if (child.getCost() <= Main.max_time){
+					children.add(child);
+				}
 			}
 		}
-		
 		return children;
-		
-		
 	}
 
 
 
-
-
-	// move functions used to move family members/member 
-	// given as argument to the left or right side
-
+	/**
+	 * This function is used to move 1 or 2 people
+	 * to the left side
+	 * @param people the arraylist that contains 
+	 * people that want to move left
+	 */
 
 	private void moveLeft(ArrayList<Person> people){
-		
-		
 		for (int i = 0; i < people.size(); i++){
-			
-				if(this.rightSide.remove(people.get(i)))
-					this.leftSide.add(people.get(i));
+			if(this.rightSide.remove(people.get(i))){
+				this.leftSide.add(people.get(i));
+			}
 		}
-		
-	
-		
 		this.setLightSide("left");
-		
-		
-		
 	}
+
+
+	/**
+	 * This function is used to move only 1 person
+	 * back to the right side.
+	 * Moving more than 1 person to the right will
+	 * not lead to an optimal solution.
+	 * @param person
+	 */
 
 	private void moveRight(Person person){
-	
-		
-			if(this.leftSide.remove(person)){
-				this.rightSide.add(person);
-			
+		if(this.leftSide.remove(person)){
+			this.rightSide.add(person);
 		}
-			
-			
-			this.setLightSide("right");
+		this.setLightSide("right");
 	}
 	
 	
-	
-	// CompareTo function being overriden in order to
-	// sort states by their scores , so in A* we can choose the best 
-	
+
+	/**
+	 * Compares the scores of 2 different states
+	 * @param s other state to be compated
+	 * @return the difference between the 2 scores
+	 */
+
 	@Override
-
 	public int compareTo(State s){						
-
 		return Double.compare(this.score, s.score);
-
 	}
 	
-	
-	
-	//Print function used to represent each state by the way
-	// people and the light are located between 2 sides.
+
+	/**
+	 * Print function used to represent each state by the way
+	 * people and the light are located between 2 sides.
+	 * @param side side that the lamp currently is
+	 */
 	
 	public void print(String side) {
 		
@@ -399,18 +335,14 @@ public class State implements Comparable<State> {		// implementing in order to b
 		if(side=="right") {
 			System.out.print("[lamp] ");
 		}
-		
+
 		for(int j=0; j<this.getRightSide().size();j++){
 			System.out.print("p"+this.getRightSide().get(j).getId()+" ");
 			}
 			
 		System.out.println();
-		
-		
 		System.out.print("--------------------------------------"+"______________________________"+"--------------------------------------\n\n");
 		//System.out.print("___________________________"+"-----------------------"+"___________________________\n\n");
-		
 	}
-
 
 }
