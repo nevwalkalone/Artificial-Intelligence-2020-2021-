@@ -19,7 +19,7 @@ javac Main.java
 ```console
 java Main
 ```
-
+When the program runs, the user is asked to give as an input the number of family members that must cross the bridge. For this example let's go with 5.
 
 
 ## Grade = 100/100
