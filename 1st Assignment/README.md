@@ -10,6 +10,11 @@ After you've downloaded locally this repository, you can either execute Main.jav
 cd "Directory where the src folder is located"
 ```  
 
+### Compile Main.java
+```properties
+javac Main.java
+```  
+
 
 
 ## Grade = 100/100
