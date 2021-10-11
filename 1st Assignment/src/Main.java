@@ -4,13 +4,19 @@ import java.util.*;
 // Main class solving the Bridge Crossing problem 
 
 public class Main{
+
 	public static int max_time;
 	public static void main(String[] args){
 
 		Scanner in = new Scanner(System.in);
-		System.out.println("Give the number of family members");	// Asking user for the number of family members
+
+		// Asking user for the number of family members
+		System.out.println("Give the number of family members");
+
 		int N = in.nextInt();
-		ArrayList<Person> family = new ArrayList<Person>(); 		// Arraylist holding all family members
+
+		// Arraylist holding all family members
+		ArrayList<Person> family = new ArrayList<Person>(); 		
 
 		// Getting time input for all members
 		for (int i = 0; i < N; i++){								
@@ -19,16 +25,24 @@ public class Main{
 			Person temp = new Person(i+1, time);
 			family.add(temp);
 		} 
-		
-		System.out.println("Give the total time limit ");		   // Time restriction for the problem to be solved
-		max_time = in.nextInt();
-		State init_state = new State(family);					   // Initial state of the problem
-		
-		SpaceSearcher space_searcher = new SpaceSearcher();		   // Initializing a new space_searcher in order to solve the problem
-		State terminal = null;
-		long start = System.currentTimeMillis();				   // Holding start time and end time, to count time needed to find the game solution
+		System.out.println("Give the total time limit ");
 
-		terminal = space_searcher.A_StarClosedSet(init_state);	   // Running the A* algorithm on the initial state 
+		// Time restriction for the problem to be solved		   
+		max_time = in.nextInt();
+
+		// Initial state of the problem
+		State init_state = new State(family);	
+
+		// Initializing a new space_searcher in order to solve the problem
+		SpaceSearcher space_searcher = new SpaceSearcher();	
+
+		State terminal = null;
+
+		// Holding start time and end time, to count time needed to find the game solution
+		long start = System.currentTimeMillis();
+
+        // Running the A* algorithm on the initial state 
+		terminal = space_searcher.A_StarClosedSet(init_state);	   
 		long end = System.currentTimeMillis();
 
 		if (terminal == null){
@@ -36,18 +50,23 @@ public class Main{
 		}
 		else{																												
 			State temp = terminal;
-			ArrayList<State> path = new ArrayList<State>();		  // Path that will hold all states, from initial state to terminal
+
+			// Path that will hold all states, from initial state to terminal
+			ArrayList<State> path = new ArrayList<State>();		  
 			path.add(terminal);
 
 			while(temp.getFather() != null) {
+
+				//adding each state to the arraylist
 				path.add(temp.getFather());
 				temp = temp.getFather();
 			}
-			Collections.reverse(path);                            // Reversing the path so that the first element is the root
+			// Reversing the path so that the first element is the root
+			Collections.reverse(path);                            
 
 
 			// PRINTING THE PATH AND MOVES THAT WERE COMPLETED IN
-			// ORDER TO REACH THE OPTIMAL SOLUTION
+			// ORDER FOR ALL FAMILY MEMBERS TO CROSS IN THE MINIMUM TIME
 
 			System.out.println("********************************************************");
 			System.out.println("Finished in " + (path.size()-1) + " steps!");
@@ -95,11 +114,9 @@ public class Main{
 				System.out.println("Time passed: "+item.getCost()+" sec");
 				System.out.println("\n");	
 			}
-
-		System.out.println("Minimum time for all members to cross the bridge from initial state: "+terminal.getCost()+" sec");
-		System.out.println("Bridge crossed successfully by all members within the time limit ("+(max_time)+")");
+			System.out.println("Minimum time for all members to cross the bridge from initial state: "+terminal.getCost()+" sec");
+			System.out.println("Bridge crossed successfully by all members within the time limit ("+(max_time)+")");
 		}
-
 		System.out.println("A* with closed set search time : " + (double)(end - start)/1000 + " sec\n");
 		in.close();
 	}

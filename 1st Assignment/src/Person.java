@@ -3,8 +3,11 @@
 
 public class Person{
 
-	protected int id;	// unique id of person given from main function during reading family members
-	protected int time;	 // time that person needs to pass from one side to the other 
+	// unique id of person given from main function during reading family members
+	protected int id;	
+
+	// time this person needs to pass from one side to the other
+	protected int time;	 
 
 	//Constructors
 
@@ -36,5 +39,4 @@ public class Person{
 	public void setId(int id){
 		this.id = id;
 	}
-
 }
