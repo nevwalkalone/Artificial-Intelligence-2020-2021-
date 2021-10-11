@@ -15,6 +15,11 @@ cd "Directory where the src folder is located"
 javac Main.java
 ```
 
+### Run Main
+```console
+java Main
+```
+
 
 
 ## Grade = 100/100
