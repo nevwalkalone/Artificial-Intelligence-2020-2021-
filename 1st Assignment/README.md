@@ -11,9 +11,9 @@ cd "Directory where the src folder is located"
 ```  
 
 ### Compile Main.java
-```properties
+```console
 javac Main.java
-```  
+```
 
 
 
