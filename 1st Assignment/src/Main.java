@@ -6,6 +6,7 @@ import java.util.*;
 public class Main{
 
 	public static int max_time;
+	
 	public static void main(String[] args){
 
 		Scanner in = new Scanner(System.in);
@@ -41,7 +42,7 @@ public class Main{
 		// Holding start time and end time, to count time needed to find the game solution
 		long start = System.currentTimeMillis();
 
-        // Running the A* algorithm on the initial state 
+                // Running the A* algorithm on the initial state 
 		terminal = space_searcher.A_StarClosedSet(init_state);	   
 		long end = System.currentTimeMillis();
 
