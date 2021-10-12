@@ -11,7 +11,7 @@ cd "Directory where the 1st Assignment src folder is located"
 ```  
 
 ### Compile Main.java
-```console
+```cmd
 javac Main.java
 ```
 
