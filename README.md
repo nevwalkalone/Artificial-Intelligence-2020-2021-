@@ -6,4 +6,4 @@ These two University Projects were completed during the Fall semester of 2020-20
 ## Contributors
 * [nevwalkalone](https://github.com/nevwalkalone)
 * [Petros247](https://github.com/Petros247)
-*[frostedpenguin](https://github.com/frostedpenguin)
+* [frostedpenguin](https://github.com/frostedpenguin)
