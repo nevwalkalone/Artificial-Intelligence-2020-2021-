@@ -26,6 +26,9 @@ When the program runs, the user is asked to give as an input the number of famil
 Afterwards the program displays the full path to reach a terminal state (all people being on the left side) if it was possible for the algorithm to find an optimal solution that does not exceed the total time limit that was given. In our case, the algorithm found a minimum time of 29 seconds for all members to cross to the left side.
 
 ![Εναλλακτικό κείμενο](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/execution-example-images/exec3.png)
+After 4 Steps.
+
+
 
 
 
