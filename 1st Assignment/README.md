@@ -29,6 +29,8 @@ Afterwards the program displays the full path to reach a terminal state (all peo
 
 After 4 Steps.
 
+![Εναλλακτικό κείμενο](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/execution-example-images/exec4.png)
+
 
 
 
