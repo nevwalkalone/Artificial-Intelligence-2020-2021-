@@ -26,4 +26,3 @@ When the program runs, the user is asked to give as an input the number of famil
 
 
 
-## Grade = 100/100
