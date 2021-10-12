@@ -1,4 +1,4 @@
-## Bridge and Torch
+# Bridge and Torch
 This Assignment is about the Bridge and Torch problem. It was asked to implement a program in Java or C++ and use an AI algorithm to solve it. Our team implemented the A* algorithm with closed set in **Java** language. So given a number of people that want to cross the bridge, our algorithm must find the optimal solution, meaning the minimum time for all people to pass across. It is highly suggested that you read about the rules of the game and what exactly was requested [here](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/assignment%20announcement-report/project-announcement.pdf), before you proceed. More details about our solution, algorithm implementation and code analysis can be found [here](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/assignment%20announcement-report/project-report.pdf).
 
 ## Execution
