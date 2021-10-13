@@ -19,7 +19,12 @@ javac Main.java
 ```console
 java Main
 ```
-When the program runs, the user is asked to give as an input the number of family members that must cross the bridge, the total time limit that must not be exceeded, as well as the amount of time that is required for each member to cross from one side to the other. Program then ends with a fully displayed path from initial to terminal state (with exact moves in each step) if a solution that does not surpass the time limit was found.
+When the program runs, the user is asked to give as an input
+1. the number of family members that must cross the bridge,
+2. the total time limit that must not be exceeded, 
+3. the amount of time that is required for each member to cross from one side to the other. 
+
+Program then ends with a fully displayed path from initial to terminal state (with exact moves in each step) if a solution that does not surpass the time limit was found.
 
 
 
