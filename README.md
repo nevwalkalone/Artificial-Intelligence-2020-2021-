@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bridge and Torch Problem
 The objective of this assignment was to write a program that implements an AI algorithm (BFS, DFS, A* etc) so an optimal solution can be found for the Bridge and Torch problem. In this project the A* algorithm with closed set was implemented and the programming language that was used was [Java (jdk15)](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html). So given a number of people that want to cross the bridge, the algorithm must find the optimal solution, meaning the minimum time for all people to pass across. It is highly suggested that you read about the rules of the game and what exactly was requested [here](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/announcement-report/project-announcement.pdf), before you proceed. More details about the algorithm implementation and code analysis can be found [here](https://github.com/nevwalkalone/Artificial-Intelligence-2020-2021-AUEB/blob/main/1st%20Assignment/announcement-report/project-report.pdf).
 
@@ -33,6 +32,5 @@ Program then ends with a fully displayed path from initial to terminal state (wi
 =======
 ## Description
 These two University Projects were completed for the "Artificial Intelligence" course at Athens University of Economics and Business, during the Fall semester of 2020-2021. The First Project is about a well known game that must be solved by implementing an AI algorithm. The Second Project is related to Machine Learning algorithms. More details [here](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/announcement-report/project-announcement.pdf).
->>>>>>> a8adb0894664427685b753646ed45ad6de63c298
 
 
