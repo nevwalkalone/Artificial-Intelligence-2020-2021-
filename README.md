@@ -22,7 +22,7 @@ javac Main.java
 ```console
 java Main
 ```
-When the program runs, the user is asked to give as an input
+When the program runs, the user is asked to give as an input:
 1. the number of family members that must cross the bridge,
 2. the total time limit that must not be exceeded, 
 3. the amount of time that is required for each member to cross from one side to the other. 
