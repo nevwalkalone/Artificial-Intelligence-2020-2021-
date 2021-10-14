@@ -7,7 +7,7 @@ After you've **cloned this project**, you can either execute Main.java in cmd/te
 
 ### Change directory
 ```properties
-cd "Directory where the 1st Assignment src folder is located"
+cd "Directory where the src folder is located"
 ```  
 
 ### Compile Main.java
