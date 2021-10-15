@@ -7,7 +7,7 @@ The objective of this assignment was to write a program that implements an AI al
 ## Useful Reads
 Before proceeding it is highly suggested that you read:
 * [Project Assignment](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/announcement-report/project-announcement.pdf), that has all the details about the game rules and what exactly was requested.
-* [Code Analysis](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/announcement-report/project-report.pdf), that has all the details about the algorithm implementation and the analysis of the Java code.
+* [Project Report](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/announcement-report/project-report.pdf), that has all the details about the algorithm implementation and the analysis of the Java code.
 
 ## Program Execution
 After you've **cloned this project**, you can either execute Main.java in cmd/terminal or in an IDE of your choice like Intellij or Eclipse. In both scenarios all java files located in the src folder must be in the same directory. Below an example of how to run the program in cmd/terminal is shown.
