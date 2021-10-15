@@ -1,42 +1,44 @@
 
-//Class representing a family member
+/**
+ * Class representing a family member
+ */
 
-public class Person{
+public class Person {
 
 	// unique id of person given from main function during reading family members
-	protected int id;	
+	protected int id;
 
 	// time this person needs to pass from one side to the other
-	protected int time;	 
+	protected int time;
 
-	//Constructors
+	// Constructors
 
-	public Person(int id, int time){
+	public Person(int id, int time) {
 		this.id = id;
 		this.time = time;
-	} 
+	}
 
-	public Person(){
+	public Person() {
 
 	}
-	
-	//Getters
 
-	public int getTime(){
+	// Getters
+
+	public int getTime() {
 		return time;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	//Setters
+	// Setters
 
-	public void setTime(int time){
+	public void setTime(int time) {
 		this.time = time;
 	}
 
-	public void setId(int id){
+	public void setId(int id) {
 		this.id = id;
 	}
 }
