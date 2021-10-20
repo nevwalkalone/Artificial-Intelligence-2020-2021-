@@ -302,7 +302,7 @@ public class State implements Comparable<State> {
 	/**
 	 * Compares the scores of 2 different states
 	 * 
-	 * @param s other state to be compated
+	 * @param s other state to be compared
 	 * @return the difference between the 2 scores
 	 */
 
