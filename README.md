@@ -2,7 +2,11 @@
 
 This project was completed for the Artificial Intelligence course of the [Department of Computer Science of the Athens University of Economics and Business](https://www.dept.aueb.gr/el/cs), during the Fall semester of 2020-2021.  
 
-The objective of this assignment was to write a program that implements an AI algorithm (BFS, DFS, A* etc) so an optimal solution can be found for the Bridge and Torch problem. In this project the A* algorithm with closed set was implemented and the programming language that was used was [Java (jdk15)](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html). So given a number of people that want to cross the bridge, the algorithm must find the optimal solution, meaning the minimum time for all people to pass across. 
+The objective of this assignment was to write a program that implements an AI algorithm (BFS, DFS, A* etc) so an optimal solution can be found for the Bridge and Torch problem. In this project the A* algorithm with closed set was implemented and the programming language. So given a number of people that want to cross the bridge, the algorithm must find the optimal solution, meaning the minimum time for all people to pass across. 
+
+## Dependencies
+[Java (jdk15)](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html).
+
 
 ## Useful Reads
 Before proceeding it is highly suggested that you read:
