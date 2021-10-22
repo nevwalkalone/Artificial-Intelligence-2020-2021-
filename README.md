@@ -34,7 +34,7 @@ Follow the instructions listed below to run the program.
 
 3. **Run** Main
 
-   ```console
+   ```bash
    java Main
    ```
 
