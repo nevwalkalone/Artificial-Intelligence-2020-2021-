@@ -50,3 +50,9 @@ When the program runs, the user is asked to give as an input:
 </ol>
 
 Program then ends with a fully displayed path from initial to terminal state (with exact moves in each step) if a solution that does not surpass the time limit was found.
+
+
+## Contributors
+* [nevwalkalone](https://github.com/nevwalkalone)
+* [Petros247](https://github.com/Petros247)
+* [frostedpenguin](https://github.com/frostedpenguin)
