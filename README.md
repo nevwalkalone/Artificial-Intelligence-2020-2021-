@@ -23,20 +23,20 @@ Follow the instructions listed below to run the program.
 
 1. **Clone** repository and change directory to src.
 
-   ```bash
+   ```console
    git clone https://github.com/nevwalkalone/Bridge-and-Torch-Problem.git
    cd src
    ```
 
 2. **Compile** Main.java
 
-   ```bash
+   ```console
    javac Main.java
    ```
 
 3. **Run** Main
 
-   ```bash
+   ```console
    java Main
    ```
 
