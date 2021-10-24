@@ -2,7 +2,7 @@
 
 This project was completed for the Artificial Intelligence course of the [Department of Computer Science of the Athens University of Economics and Business](https://www.dept.aueb.gr/el/cs), during the Fall semester of 2020-2021.
 
-The objective of this assignment was to write a program that implements an AI algorithm (BFS, DFS, A* etc) so an optimal solution can be found for the [Bridge and Torch problem](https://en.wikipedia.org/wiki/Bridge_and_torch_problem). In this project the A* algorithm with closed set was implemented. So given a number of people that want to cross the bridge, the algorithm must find the optimal solution, meaning the minimum time for all people to pass across.
+The objective of this assignment was to write a program that implements an AI algorithm (BFS, DFS, A* etc) so an optimal solution can be found for the [Bridge and Torch](https://en.wikipedia.org/wiki/Bridge_and_torch_problem) problem. In this project the A* algorithm with closed set was implemented. So given a number of people that want to cross the bridge, the algorithm must find the optimal solution, meaning the minimum time for all people to pass across.
 
 
 ## Useful Reads
