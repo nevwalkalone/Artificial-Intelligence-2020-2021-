@@ -19,8 +19,6 @@ For a full overview it is highly suggested that you read:
 
 ## Program Execution
 
-Follow the instructions listed below to run the program.
-
 1. **Clone** repository and change directory to src.
 
    ```console
