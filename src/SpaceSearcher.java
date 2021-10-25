@@ -32,7 +32,7 @@ public class SpaceSearcher {
 
 		while (this.states.size() > 0) {
 
-			/**
+			/*
 			 * Removing from the arraylist always the state /with the best score so we can
 			 * check it
 			 */

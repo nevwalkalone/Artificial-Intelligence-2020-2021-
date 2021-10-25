@@ -44,7 +44,7 @@ public class Main {
 
 		State terminal = null;
 
-		/**
+		/*
 		 * Holding start time and end time, to count time needed to find the game
 		 * solution
 		 */
@@ -75,7 +75,7 @@ public class Main {
 			// Reversing the path so that the first element is the root
 			Collections.reverse(path);
 
-			/**
+			/*
 			 * PRINTING THE PATH AND ALL MOVES THAT WERE COMPLETED IN ORDER FOR ALL FAMILY
 			 * MEMBERS TO CROSS IN THE MINIMUM AMOUNT OF TIME
 			 */
