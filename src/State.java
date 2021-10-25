@@ -1,7 +1,7 @@
 import java.util.*;
 
-/**
- * Class State representing a state of the bridge crossing problem. Comparable
+/*
+ * Class representing a state of the Bridge and Torch problem. Comparable
  * is implemented in order to be able to compare the scores of 2 states
  */
 
@@ -107,11 +107,10 @@ public class State implements Comparable<State> {
 	}
 
 	/**
-	 * Necessary function to check whether a state is terminal or not
+	 * Checks whether a state is terminal or not
 	 * 
 	 * @return true if state is terminal, false otherwise
 	 */
-
 	public boolean isTerminal() {
 		return rightSide.isEmpty();
 	}
@@ -122,7 +121,6 @@ public class State implements Comparable<State> {
 	 * 
 	 * @return the cost of this state
 	 */
-
 	private int heuristic() {
 
 		int h_score = 0;
@@ -174,18 +172,15 @@ public class State implements Comparable<State> {
 	 * A* evaluation, taking into account the time cost to reach the specific state,
 	 * as well as the heuristic approach
 	 */
-
 	private void evaluate() {
 		setScore(this.getCost() + this.heuristic());
 	}
 
 	/**
-	 * This funcion is used to produce all possible children-states of a specific
-	 * state
+	 * Produces all possible children-states of a specific state
 	 * 
 	 * @return the arraylist that contains all children
 	 */
-
 	public ArrayList<State> getChildren() {
 
 		ArrayList<State> children = new ArrayList<State>();
@@ -271,11 +266,10 @@ public class State implements Comparable<State> {
 	}
 
 	/**
-	 * This function is used to move 1 or 2 people to the left side
+	 * Moves 1 or 2 people to the left side
 	 * 
 	 * @param people the arraylist that contains people that want to move left
 	 */
-
 	private void moveLeft(ArrayList<Person> people) {
 		for (int i = 0; i < people.size(); i++) {
 			if (this.rightSide.remove(people.get(i))) {
@@ -286,8 +280,8 @@ public class State implements Comparable<State> {
 	}
 
 	/**
-	 * This function is used to move only 1 person back to the right side. Moving
-	 * more than 1 person to the right will not lead to an optimal solution.
+	 * Moves only 1 person back to the right side. Moving more than 1 person to the
+	 * right will not lead to an optimal solution.
 	 * 
 	 * @param person Person that wants to move to the right
 	 */
@@ -305,7 +299,6 @@ public class State implements Comparable<State> {
 	 * @param s other state to be compared
 	 * @return the difference between the 2 scores
 	 */
-
 	@Override
 	public int compareTo(State s) {
 		return Double.compare(this.score, s.score);
@@ -317,7 +310,6 @@ public class State implements Comparable<State> {
 	 * 
 	 * @param side Side that the lamp currently is
 	 */
-
 	public void print(String side) {
 
 		if (side == "left") {

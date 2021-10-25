@@ -1,8 +1,8 @@
 import java.util.*;
 
-/**
+/*
  * Space Searcher class used to implement the A* function in order to solve the
- * bridge crossing problem , using Closed Set
+ * Bridge and Torch problem, using Closed Set
  */
 
 public class SpaceSearcher {
@@ -24,7 +24,6 @@ public class SpaceSearcher {
 	 * @param init_state The initial state.
 	 * @return Returns the terminal state, if a solution is found.
 	 */
-
 	public State A_StarClosedSet(State init_state) {
 
 		this.states = new ArrayList<State>();
@@ -59,4 +58,5 @@ public class SpaceSearcher {
 		// if terminal state is not found, a null value is returned
 		return null;
 	}
+
 }

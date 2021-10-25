@@ -1,7 +1,7 @@
 import java.util.*;
 
-/**
- * Runner program solving the Bridge Crossing problem
+/*
+ * Runner program solving the Bridge and Torch problem
  */
 
 public class Main {
@@ -76,8 +76,8 @@ public class Main {
 			Collections.reverse(path);
 
 			/**
-			 * PRINTING THE PATH AND ALL MOVES THAT WERE COMPLETED IN /* ORDER FOR ALL
-			 * FAMILY MEMBERS TO CROSS IN THE MINIMUM TIME
+			 * PRINTING THE PATH AND ALL MOVES THAT WERE COMPLETED IN ORDER FOR ALL FAMILY
+			 * MEMBERS TO CROSS IN THE MINIMUM AMOUNT OF TIME
 			 */
 
 			System.out.println("********************************************************");
@@ -132,4 +132,5 @@ public class Main {
 		System.out.println("A* with closed set search time : " + (double) (end - start) / 1000 + " sec\n");
 		in.close();
 	}
+
 }
