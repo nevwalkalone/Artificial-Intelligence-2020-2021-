@@ -20,13 +20,13 @@ public class State implements Comparable<State> {
 	// initial state
 	private int score = 1000;
 
-	/**
+	/*
 	 * father state (previous state that resulted to present state) needed mainly
 	 * for print reasons
 	 */
 	private State father = null;
 
-	/**
+	/*
 	 * cost attribute used to represent the time cost needed to achieve the current
 	 * state
 	 */
@@ -126,7 +126,7 @@ public class State implements Comparable<State> {
 		int h_score = 0;
 		int max = 0;
 
-		/**
+		/*
 		 * if the light is on the right side we assume that all right side people can
 		 * cross the bridge at the same time cost is equal to the maximum time
 		 */
@@ -139,7 +139,7 @@ public class State implements Comparable<State> {
 			return max;
 		}
 
-		/**
+		/*
 		 * If the light is on the left side we assume that the fastest left person moves
 		 * on the right side and then all right side people cross the bridge at the same
 		 * time cost is equal to the minimum time of the left side plus the max time of
@@ -205,7 +205,7 @@ public class State implements Comparable<State> {
 				}
 			}
 
-			/**
+			/*
 			 * 2 people or more if the light is on the right side we produce states coming
 			 * out of moves from 2 persons to the left states coming out of of moves from 1
 			 * person only won't lead to an optimal solution
@@ -226,7 +226,7 @@ public class State implements Comparable<State> {
 						child.setCost(maxim);
 						child.evaluate();
 
-						/**
+						/*
 						 * we add this child to the children array only if its cost doesn't surpass the
 						 * time restriction
 						 */
@@ -238,7 +238,7 @@ public class State implements Comparable<State> {
 			}
 		}
 
-		/**
+		/*
 		 * if the light is on the left side we produce states coming out of moves from
 		 * only 1 person each time back to the right
 		 */
@@ -253,7 +253,7 @@ public class State implements Comparable<State> {
 				child.evaluate();
 				child.setFather(this);
 
-				/**
+				/*
 				 * we add this child to the children array only if its cost doesn't surpass the
 				 * time restriction
 				 */
