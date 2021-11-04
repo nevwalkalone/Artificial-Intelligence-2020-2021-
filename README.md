@@ -8,8 +8,8 @@ The objective of this assignment was to write a program that implements an AI al
 
 For a full overview it is highly suggested that you read:
 
-- [Project Assignment](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/assignment-report/project-assignment.pdf), that has all the details about the game rules and what exactly was requested.
-- [Project Report](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/assignment-report/project-report.pdf), that has all the details about the algorithm implementation and the analysis of the code.
+- [Project Assignment](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/assignment-report/project-assignment.pdf), that contains all the details about the game rules and what exactly was requested.
+- [Project Report](https://github.com/nevwalkalone/Bridge-and-Torch-Problem/blob/main/assignment-report/project-report.pdf), that contains all the details about the algorithm implementation and the analysis of the code.
 
 ## Dependencies
 
