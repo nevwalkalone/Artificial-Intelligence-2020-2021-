@@ -46,7 +46,7 @@ When the program runs, the user is asked to give as an input:
 
 Program then ends with a fully displayed path from initial to terminal state (with exact moves in each step) if a solution that does not surpass the time limit is found.
 
-## Contributors
+## Collaborators
 
 - [nevwalkalone](https://github.com/nevwalkalone)
 - [Petros247](https://github.com/Petros247)
