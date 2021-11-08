@@ -39,9 +39,9 @@ For a full overview it is highly suggested that you read:
 When the program runs, the user is asked to give as an input:
 
 <ol type="a">
-  <li>the number of family members that must cross the bridge,</li>
-  <li>the total time limit that must not be exceeded, </li>
-  <li>the amount of time that is required for each member to cross from one side to the other.  </li>
+  <li>the number of family members that must cross the bridge</li>
+  <li>the total time limit that must not be exceeded </li>
+  <li>the amount of time that is required for each member to cross from one side to the other  </li>
 </ol>
 
 Program then ends with a fully displayed path from initial to terminal state (with exact moves in each step) if a solution that does not surpass the time limit is found.
