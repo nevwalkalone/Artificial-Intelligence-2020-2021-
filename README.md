@@ -55,3 +55,7 @@ Program then ends with a fully displayed path from initial to terminal state (wi
 ## Contributions
 
 If you want to contribute, you can always create a pull request or open an issue.
+
+## License
+
+[MIT](LICENSE)
