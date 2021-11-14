@@ -17,20 +17,26 @@ For a full overview it is highly suggested that you read:
 
 ## Program Execution
 
-1. **Clone** repository and change directory to src
+1. **Clone** repository.
 
    ```console
    git clone https://github.com/nevwalkalone/Bridge-and-Torch-Problem.git
-   cd src
+   
+   ```
+   
+2. **Change** directory to src.
+
+   ```console
+   cd Bridge-and-Torch-Problem\src
    ```
 
-2. **Compile** Main.java
+3. **Compile** Main.java
 
    ```console
    javac Main.java
    ```
 
-3. **Run** Main
+4. **Run** Main
 
    ```console
    java Main
