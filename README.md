@@ -17,7 +17,7 @@ For a full overview it is highly suggested that you read:
 
 ## Program Execution
 
-1. **Clone** repository and change directory to src.
+1. **Clone** repository and change directory to src
 
    ```console
    git clone https://github.com/nevwalkalone/Bridge-and-Torch-Problem.git
