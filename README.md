@@ -17,14 +17,14 @@ For a full overview it is highly suggested that you read:
 
 ## Program Execution
 
-1. **Clone** repository.
+1. **Clone** repository
 
    ```console
    git clone https://github.com/nevwalkalone/Bridge-and-Torch-Problem.git
    
    ```
    
-2. **Change** directory to src.
+2. **Change** directory to src
 
    ```console
    cd Bridge-and-Torch-Problem\src
